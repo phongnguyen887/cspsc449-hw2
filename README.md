@@ -17,6 +17,13 @@ Thing to be done:
 ### Prerequisites
 - Docker
 - Docker Compose
+- Create .env file
+```
+MYSQL_DATABASE_URL=mysql+pymysql://root:${MYSQL_ROOT_PASSWORD}@db:3306/${MYSQL_DATABASE}
+
+MYSQL_ROOT_PASSWORD=password    #Replace with your MySQL credentials
+MYSQL_DATABASE=book_management
+```
 
 ### Installation Steps
 1. Clone the repository
