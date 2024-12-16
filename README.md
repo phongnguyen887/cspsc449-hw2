@@ -19,16 +19,14 @@ Thing to be done:
 - Docker Compose
 - Create .env file
 ```
-MYSQL_DATABASE_URL=mysql+pymysql://root:${MYSQL_ROOT_PASSWORD}@db:3306/${MYSQL_DATABASE}
+MYSQL_DATABASE_URL=mysql+pymysql://root:${MYSQL_ROOT_PASSWORD}@db:3306/book_management
 
 MYSQL_ROOT_PASSWORD=password    #Replace with your MySQL credentials
-MYSQL_DATABASE=book_management
 ```
 
 ### Installation Steps
 1. Clone the repository
-2. Navigate to the backend directory
-3. Run `docker-compose up --build`
+2. Run `docker-compose up --build`
 
 ### API Endpoints
 - `POST /books/`: Create a new book
