@@ -5,13 +5,9 @@ from typing import List  # List for type hinting in response models
 from sqlalchemy import create_engine, Column, Integer, String  # SQLAlchemy utilities for ORM mapping
 from sqlalchemy.ext.declarative import declarative_base  # Base class for SQLAlchemy models
 from sqlalchemy.orm import sessionmaker, Session  # Session and sessionmaker for database interactions
-from dotenv import load_dotenv
-
-load_dotenv()
-import os
-DATABASE_URL = os.getenv("MYSQL_DATABASE_URL")  # MySQL database connection string
 
 # SQLAlchemy configuration
+DATABASE_URL = "mysql+pymysql://root:password@db/book_management"  # MySQL database connection string
 engine = create_engine(DATABASE_URL, connect_args={"charset": "utf8mb4"})  # Create SQLAlchemy engine with utf8mb4 charset
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)  # Create a session factory for database sessions
 Base = declarative_base()  # Base class for defining SQLAlchemy ORM models
